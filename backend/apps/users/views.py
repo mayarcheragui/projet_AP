@@ -39,7 +39,7 @@ class RegisterView(generics.CreateAPIView):
         user = serializer.save()
         
         # 2. Log the user in immediately (This sets the Session Cookie)
-        login(request, user)
+        
         
         # 3. Return the user data and a success message
         return Response({
